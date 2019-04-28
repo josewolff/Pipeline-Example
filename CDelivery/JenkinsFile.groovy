@@ -1,7 +1,6 @@
 
 def runner = { commandToExecute -> isUnix() ? sh(commandToExecute) : bat(commandToExecute) }
 def description = ""
-def nameWhoApproveOrReject = ""
 buils: {
     stage("Build - Stage"){
         node('master'){
@@ -58,7 +57,7 @@ uat:{
                 parameters: [
                     [$class: 'TextParameterDefinition', choidefaultValueces: 'None', description: 'description', name:'description']
                 ])
-            nameWhoApproveOrReject = userInput['name']
+            description = userInput['description']
         }
     }
 }
