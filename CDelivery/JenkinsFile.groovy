@@ -56,8 +56,7 @@ uat:{
                 id: 'userInput', message: 'Accepted or Rejected',
                 parameters: [
                     [$class: 'TextParameterDefinition', defaultValue: 'None', description: 'description', name:'description']
-                ])
-            description = userInput['description']
+             ])
         }
     }
 }
